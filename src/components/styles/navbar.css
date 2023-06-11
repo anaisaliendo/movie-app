@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root {
+    --font-family:'Righteous', cursive;
+    --font-family-menu:'Poppins', sans-serif;
+    --color-nav-menu:#ffff;
+    --color-nav-bg:#000;
+    --color-btn:rgb(61, 3, 3);
+    --color-btn-border: #00000054;
+    --color-bg: linear-gradient( 179deg,  rgba(0,0,0,1) 9.2%, rgba(127,16,16,1) 103.9% );;
+}
+
+body{
+    background-image: var(--color-bg);
+}
+h1,h2,h3,h4,h5,h6,p,li,ul{
+    color: var(--color-nav-menu);
+}
+
+.nav__logo{
+    
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: var(--color-nav-menu);
+    font-family: var(--font-family);
+}
+
+.navbar{
+    background-color: var(--color-nav-bg);
+    color: var(--color-nav-menu);
+    font-size: 18px;
+}
+.nav__menu{
+    color: var(--color-nav-menu);
+    font-family: var(--font-family-menu);
+}
+.btn{
+    background-color: var(--color-btn);
+    border-color:var(--color-nav-menu);
+}
+.btn-secondary{
+    color: var(--color-nav-menu);
+}
+
+.btn:hover{
+    background-color: var( --color-btn-border);
+    border: var(--color-nav-menu);
+}
+
+
+.genres-item{
+    color: var(--color-nav-bg);
+}

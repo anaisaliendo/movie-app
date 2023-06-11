@@ -1,0 +1,12 @@
+.card{
+   background: rgb(0, 0, 0);
+   background: linear-gradient(149deg, rgb(0, 0, 0) 11%, rgba(36, 3, 3, 0.842) 24%);;
+   transition: transform 0.3s ease-in-out;
+   color: #ffffff;
+}
+.card:hover{
+    transform: scale(1.08);
+}
+.d-flex{
+    margin-top: 0.8rem;
+}
