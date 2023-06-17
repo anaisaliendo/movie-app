@@ -22,20 +22,28 @@ h1,h2,h3,h4,h5,h6,p,li,ul{
 .nav__logo{
     
     font-size: 28px;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     color: var(--color-nav-menu);
     font-family: var(--font-family);
+}
+.nav__logo:hover{
+    color: var(--color-btn);
 }
 
 .navbar{
     background-color: var(--color-nav-bg);
     color: var(--color-nav-menu);
     font-size: 18px;
+    letter-spacing: 1.5px;
 }
 .nav__menu{
     color: var(--color-nav-menu);
     font-family: var(--font-family-menu);
 }
+.nav__menu:hover{
+    color: var(--color-btn);
+}
+
 .btn{
     background-color: var(--color-btn);
     border-color:var(--color-nav-menu);
