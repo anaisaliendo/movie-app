@@ -3,11 +3,13 @@ import { Button, Col, FloatingLabel, Form, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import MovieCard from '../components/Movies/MovieCard';
+import ("../pages/styles/home.css")
 
 const Home = () => {
 
     const { movies, genres } = useSelector(state => state);
     const [moviesFiltered, setMoviesFiltered] = useState([]);
+    const [showOptions, setShowOptions] = useState(true);
     useEffect(() => setMoviesFiltered(movies), [movies]);
 
     const filterMovies = (itemId, itemFilter) => {
@@ -15,14 +17,20 @@ const Home = () => {
             movie[itemFilter].some(item => item.id === itemId)
         )
         setMoviesFiltered(filtered);
-    }
+        setShowOptions(false);
+    };
 
+    const handleFilter = () =>{
+        setShowOptions(!showOptions);
+    }
     const navigate = useNavigate();
 
     return (
         <Row>
             <Col md={3} xl={2}>
-                <h3>Filter by genre</h3>
+                <h3 onClick={handleFilter} className='filter__btn'>Filter by Genre</h3>
+                {!showOptions && (
+                    <ul className={`filter-options ${showOptions ? 'show' : ''}`}>
                 {genres.map(genre => (
                     <li
                         key={genre.id}
@@ -32,6 +40,8 @@ const Home = () => {
                         {genre.name}
                     </li>
                 ))}
+                </ul>
+                )}
             </Col>
             <Col>
                 <div className="d-flex justify-content-between align-items-start mb-4">
